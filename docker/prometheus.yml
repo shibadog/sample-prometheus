@@ -1,0 +1,7 @@
+scrape_configs:
+  - job_name: 'spring'
+    metrics_path: '/actuator/prometheus'
+
+    static_configs:
+    # 実行ホスト名を指定しないと動かないヨ
+    - targets: ['192.168.2.107:8080']
